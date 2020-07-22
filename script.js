@@ -93,7 +93,7 @@ const calculate = ()=>{
 			result = parseFloat(prevNumber) * parseFloat(currentNumber);
 			break;
 		case "/":
-		result = parseFloat(prevNumber) / parseFloat(currentNumber);
+			result = parseFloat(prevNumber) / parseFloat(currentNumber);
 			break;
 		default:
 			break;
@@ -152,9 +152,23 @@ decimal.addEventListener('click', (event)=>{
 });
 
 
+// Tombol Persen
 
+// Mengambil elemen button dengan class percentage
+const percentages = document.querySelector('.percentage');
 
+// Fungsi agar angka dibagi dengan 100
+// Karena persen itu dibagi 100
+const inputPercentage = ()=>{
+	let result = ''
+	result = parseFloat(currentNumber) / 100;
+	currentNumber = result;
+}
 
-
-
+// Fungsi Menjalankan fungsi inputPercentage
+// Dan menampilkannya di input hasil
+percentages.addEventListener('click', (event)=>{
+	inputPercentage(event.target.value);
+	updateScreen(currentNumber);
+});
 
