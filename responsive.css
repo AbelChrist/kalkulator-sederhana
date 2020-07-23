@@ -8,4 +8,7 @@
 	.calculator{
 		width: 100%;
 	}
+	.calculator-screen{
+		font-size: 30px;
+	}
 }
