@@ -46,8 +46,6 @@ const updateScreen = (number) =>{
 // Dan menyimpan ke sebuah variabel
 // Mengambil elemen button dengan class number
 const numbers = document.querySelectorAll('.number');
-console.log(numbers);
-
 
 // Untuk mengambil nilai (value) dari elemen(tombol) yang di klik\
 // Method addEventListener untuk mengambil value jika tombol diklik
@@ -160,9 +158,7 @@ const percentages = document.querySelector('.percentage');
 // Fungsi agar angka dibagi dengan 100
 // Karena persen itu dibagi 100
 const inputPercentage = ()=>{
-	let result = ''
-	result = parseFloat(currentNumber) / 100;
-	currentNumber = result;
+	currentNumber /= 100;
 }
 
 // Fungsi Menjalankan fungsi inputPercentage
